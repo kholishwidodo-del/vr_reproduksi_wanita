@@ -59,9 +59,16 @@
     <div id="ui-layer" class="ui-layer">
         
         <!-- AUDIO -->
-        <audio id="bgm" loop>
-            <source src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+        <audio id="bgm" loop preload="auto">
+            <!-- Musik relaksasi/fokus belajar (Piano Klasik Lembut - MP3 format) -->
+            <source src="https://ia800609.us.archive.org/21/items/MoonlightSonata_755/Beethoven-MoonlightSonata.mp3" type="audio/mpeg">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3" type="audio/mpeg">
         </audio>
+
+        <!-- TOMBOL MUSIK LATAR -->
+        <button id="bgm-btn" onclick="toggleBGM()" class="fixed top-4 right-4 z-50 glass-panel px-4 py-2 hover:bg-white/10 transition font-semibold interactive pointer-events-auto flex items-center gap-2 rounded-full border border-pink-500/30">
+            <span id="bgm-icon">🔇</span> <span class="hidden md:inline text-sm text-pink-300">Musik</span>
+        </button>
 
         <!-- SCREEN: HOME -->
         <div id="screen-home" class="interactive flex flex-col items-center justify-center min-h-screen p-6 relative">
@@ -103,9 +110,6 @@
                     <div>Sekolah: <strong class="text-white">MTsN 1 Kota Malang</strong></div>
                 </div>
                 
-                <button onclick="toggleBGM()" class="interactive absolute top-4 right-4 bg-slate-800 p-3 rounded-full hover:bg-slate-700 transition">
-                    🎵 <span id="bgm-status" class="text-xs">BGM OFF</span>
-                </button>
                 <button onclick="showGuide()" class="interactive absolute top-4 left-4 bg-slate-800 px-4 py-2 text-sm rounded-full hover:bg-slate-700 transition">
                     ℹ️ Petunjuk
                 </button>
@@ -406,23 +410,72 @@
                 canvas.style.display = 'none';
                 hotspots.style.display = 'none';
             }
-
-            if(screenId === 'kuis') startQuiz();
         }
 
         // --- AUDIO ---
+        let autoBgmAttempted = false;
+
         function toggleBGM() {
             const bgm = document.getElementById('bgm');
-            const status = document.getElementById('bgm-status');
-            if(state.bgmPlaying) {
+            const icon = document.getElementById('bgm-icon');
+            
+            autoBgmAttempted = true; // Tandai bahwa user sudah berinteraksi dengan audio
+
+            if (state.bgmPlaying) {
                 bgm.pause();
-                status.innerText = "BGM OFF";
+                state.bgmPlaying = false;
+                icon.innerText = "🔇";
             } else {
-                bgm.play().catch(e => console.log("Audio play prevented by browser"));
-                status.innerText = "BGM ON";
+                bgm.volume = 1.0; // Volume dimaksimalkan 100%
+                icon.innerText = "⏳"; // Indikator loading saat mencoba memutar
+                
+                bgm.play().then(() => {
+                    state.bgmPlaying = true;
+                    icon.innerText = "🔊";
+                }).catch(e => {
+                    console.error("Gagal memutar audio:", e);
+                    state.bgmPlaying = false;
+                    icon.innerText = "🔇"; // Kembalikan jika gagal
+                });
             }
-            state.bgmPlaying = !state.bgmPlaying;
         }
+
+        function initAutoBGM() {
+            const bgm = document.getElementById('bgm');
+            bgm.volume = 1.0; // Volume dimaksimalkan 100%
+            
+            const playAttempt = (e) => {
+                // Jika user sudah mengklik tombol manual, hentikan percobaan auto-play
+                if(autoBgmAttempted) {
+                    document.removeEventListener('click', playAttempt);
+                    document.removeEventListener('touchstart', playAttempt);
+                    return;
+                }
+                
+                // Jangan picu autoplay jika yang diklik adalah area tombol BGM itu sendiri
+                if(e && e.target && (e.target.id === 'bgm-btn' || e.target.closest('#bgm-btn'))) {
+                    return;
+                }
+                
+                bgm.play().then(() => {
+                    state.bgmPlaying = true;
+                    autoBgmAttempted = true;
+                    const icon = document.getElementById('bgm-icon');
+                    if (icon) icon.innerText = "🔊";
+                    // Hapus event listener setelah musik berhasil diputar
+                    document.removeEventListener('click', playAttempt);
+                    document.removeEventListener('touchstart', playAttempt);
+                }).catch(e => {
+                    // Menunggu interaksi selanjutnya
+                });
+            };
+
+            // Menempelkan pemicu otomatis pada klik pertama pengguna di mana saja
+            document.addEventListener('click', playAttempt);
+            document.addEventListener('touchstart', playAttempt);
+        }
+        
+        initAutoBGM();
 
         // --- GUIDE ---
         function showGuide() { document.getElementById('guide-modal').classList.remove('hidden'); }
