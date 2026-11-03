@@ -60,9 +60,9 @@
         
         <!-- AUDIO -->
         <audio id="bgm" loop preload="auto">
-            <!-- Musik relaksasi/fokus belajar (Piano Klasik Lembut - MP3 format) -->
-            <source src="https://ia800609.us.archive.org/21/items/MoonlightSonata_755/Beethoven-MoonlightSonata.mp3" type="audio/mpeg">
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3" type="audio/mpeg">
+            <!-- Musik dengan ritme upbeat/semangat agar tidak mengantuk (MP3 format) -->
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
         </audio>
 
         <!-- TOMBOL MUSIK LATAR -->
@@ -409,6 +409,11 @@
             } else {
                 canvas.style.display = 'none';
                 hotspots.style.display = 'none';
+                
+                // PERBAIKAN: Otomatis memuat dan memulai soal saat menu kuis diklik
+                if (screenId === 'kuis') {
+                    startQuiz();
+                }
             }
         }
 
