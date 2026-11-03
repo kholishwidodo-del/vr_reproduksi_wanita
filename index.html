@@ -128,7 +128,7 @@
                 <div class="glass-panel p-2 flex gap-2">
                     <button onclick="resetCamera()" class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-sm transition">Reset View</button>
                     <button onclick="toggleTransparency()" class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-sm transition">Mode Transparan</button>
-                    <button onclick="toggleLabels()" class="px-3 py-1 bg-cyan-700 hover:bg-cyan-600 rounded text-sm transition">Toggle Label</button>
+                    <button id="toggle-label-btn" onclick="toggleLabels()" class="px-3 py-1 bg-pink-700 hover:bg-pink-600 rounded text-sm transition">Sembunyikan Nomor Organ</button>
                 </div>
             </div>
 
@@ -391,7 +391,7 @@
                                 <li><strong class="text-pink-300">Ovulasi:</strong> Pelepasan sel telur matang dari ovarium.</li>
                                 <li><strong class="text-pink-300">Fertilisasi:</strong> Peleburan sel sperma & ovum di tuba falopi.</li>
                                 <li><strong class="text-pink-300">Pembelahan:</strong> Zigot membelah menjadi 2 sel, 4 sel, dst.</li>
-                                <li><strong class="text-pink-300">Pembelahan Lanjutan:</strong> Membentuk morula & blastokista.</li>
+                                <li><strong class="text-pink-300">Pembelahan Lanjutan:</strong> Memforming morula & blastokista.</li>
                                 <li><strong class="text-pink-300">Implantasi:</strong> Blastokista menempel & membenamkan diri di lapisan endometrium rahim.</li>
                             </ol>
                         </div>
@@ -404,54 +404,19 @@
                                 <img src="gambar_5.jpg" alt="Panduan Menjaga Kesehatan Organ Reproduksi" class="w-full h-auto rounded-lg object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                 <svg class="w-full h-auto hidden" viewBox="0 0 350 240" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="350" height="240" rx="12" fill="#090d16"/>
-                                    
-                                    <!-- Perisai Pelindung Utama (Shield/Protection) -->
                                     <path d="M 175 25 C 130 25 85 45 85 105 C 85 170 175 215 175 215 C 175 215 265 170 265 105 C 265 45 220 25 175 25 Z" fill="#064e3b" opacity="0.6" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 2"/>
-                                    
-                                    <!-- Ikon Kebersihan / Air (Droplet & Sparkling) -->
-                                    <g transform="translate(105, 50)">
-                                        <circle cx="20" cy="20" r="18" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
-                                        <path d="M 20 10 C 20 10 12 21 12 25 C 12 29.4 15.6 33 20 33 C 24.4 33 28 29.4 28 25 C 28 21 20 10 20 10 Z" fill="#38bdf8"/>
-                                        <text x="20" y="48" fill="#a7f3d0" font-size="8" font-weight="bold" text-anchor="middle">Air Bersih</text>
-                                    </g>
-
-                                    <!-- Ikon Pakaian Bahan Katun (Shirt/Fabric) -->
-                                    <g transform="translate(205, 50)">
-                                        <circle cx="20" cy="20" r="18" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
-                                        <path d="M 12 12 L 18 16 L 22 16 L 28 12 L 25 28 L 15 28 Z" fill="#fbbf24"/>
-                                        <text x="20" y="48" fill="#a7f3d0" font-size="8" font-weight="bold" text-anchor="middle">Celana Katun</text>
-                                    </g>
-
-                                    <!-- Ikon Ganti Pembalut Rutin (Menstrual Care/Clock) -->
-                                    <g transform="translate(105, 125)">
-                                        <circle cx="20" cy="20" r="18" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
-                                        <circle cx="20" cy="20" r="10" stroke="#f472b6" stroke-width="2" fill="none"/>
-                                        <polyline points="20,13 20,20 25,23" stroke="#f472b6" stroke-width="2" stroke-linecap="round"/>
-                                        <text x="20" y="48" fill="#a7f3d0" font-size="8" font-weight="bold" text-anchor="middle">Rutin Ganti</text>
-                                    </g>
-
-                                    <!-- Ikon Gaya Hidup Sehat & Nutrisi (Heart/Healthy) -->
-                                    <g transform="translate(205, 125)">
-                                        <circle cx="20" cy="20" r="18" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
-                                        <path d="M 20 28 L 14 22 C 11.5 19.5 11.5 15.5 14 13 C 16.5 10.5 20.5 11.5 20 14 C 19.5 11.5 23.5 10.5 26 13 C 28.5 15.5 28.5 19.5 26 22 L 20 28 Z" fill="#ef4444"/>
-                                        <text x="20" y="48" fill="#a7f3d0" font-size="8" font-weight="bold" text-anchor="middle">Gaya Hidup</text>
-                                    </g>
-
-                                    <!-- Judul Tengah -->
                                     <text x="175" y="115" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">KESEHATAN</text>
                                     <text x="175" y="128" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">ORGAN REPRODUKSI</text>
                                 </svg>
                             </div>
                         </div>
                         <div class="w-full md:w-1/2">
-                            <h3 class="text-2xl font-bold text-emerald-400 mb-4">6. Menjaga Kesehatan Organ ReproduKSI</h3>
-                            <p class="text-gray-300 leading-relaxed mb-3">Menjaga kebersihan dan kesehatan organ reproduksi sangat penting untuk mencegah infeksi, iritasi, serta penyakit saluran reproduksi:</p>
+                            <h3 class="text-2xl font-bold text-emerald-400 mb-4">6. Menjaga Kesehatan Organ Reproduksi</h3>
+                            <p class="text-gray-300 leading-relaxed mb-3">Menjaga kebersihan dan kesehatan organ reproduksi sangat penting untuk mencegah infeksi dan iritasi.</p>
                             <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
-                                <li><strong class="text-emerald-300">Membasuh dari Depan ke Belakang:</strong> Saat membersihkan area kewanitaan setelah buang air, selalu basuh dari depan ke belakang agar bakteri dari anus tidak masuk ke organ reproduksi.</li>
-                                <li><strong class="text-emerald-300">Pakaian Dalam Bahan Katun:</strong> Gunakan celana dalam berbahan katun yang menyerap keringat dan ganti minimal 2 kali sehari agar area reproduksi tidak lembap.</li>
-                                <li><strong class="text-emerald-300">Rutin Mengganti Pembalut:</strong> Saat menstruasi, ganti pembalut secara berkala setiap 3–4 jam sekali untuk mencegah perkembangbiakan bakteri dan jamur.</li>
-                                <li><strong class="text-emerald-300">Hindari Sabun Pembilas Beraroma Keras:</strong> Jangan sering menggunakan sabun pembersih kewanitaan yang mengandung parfum/kimia keras karena dapat merusak kadar pH alami dan flora normal vagina.</li>
-                                <li><strong class="text-emerald-300">Pola Hidup & Nutrisi Seimbang:</strong> Konsumsi makanan bergizi, cukupi kebutuhan air minum, dan berolahraga secara teratur untuk menjaga kestabilan hormon reproduksi.</li>
+                                <li><strong class="text-emerald-300">Membasuh dari Depan ke Belakang:</strong> Selalu membasuh dari depan ke belakang setelah buang air.</li>
+                                <li><strong class="text-emerald-300">Pakaian Dalam Bahan Katun:</strong> Gunakan celana dalam berbahan katun yang menyerap keringat.</li>
+                                <li><strong class="text-emerald-300">Rutin Mengganti Pembalut:</strong> Ganti pembalut secara berkala setiap 3–4 jam sekali saat menstruasi.</li>
                             </ul>
                         </div>
                     </section>
@@ -943,26 +908,26 @@
             }
             hotspotDots = [];
 
-            // Define specific anchor points for labels and dots
+            // Define specific anchor points for labels and dots with numbers (1 to 7)
             const anchorPoints = [
-                { id: 'Uterus', pos: new THREE.Vector3(0, 1.5, 2.5) },
-                { id: 'Ovarium', pos: new THREE.Vector3(9, 0.5, -1) }, 
-                { id: 'TubaFalopi', pos: new THREE.Vector3(4.5, 4.5, -0.5) }, 
-                { id: 'Serviks', pos: new THREE.Vector3(0, -3.5, 2) },
-                { id: 'Vagina', pos: new THREE.Vector3(0, -6, 2) },
-                { id: 'Endometrium', pos: new THREE.Vector3(0, -0.5, 2.0) }, // Titik khusus endometrium (tengah rahim)
-                { id: 'Fimbriae', pos: new THREE.Vector3(8.5, 1.5, 1.0) }
+                { id: 'Ovarium', num: '1', pos: new THREE.Vector3(9, 0.5, -1) }, 
+                { id: 'TubaFalopi', num: '2', pos: new THREE.Vector3(4.5, 4.5, -0.5) }, 
+                { id: 'Fimbriae', num: '3', pos: new THREE.Vector3(8.5, 1.5, 1.0) },
+                { id: 'Uterus', num: '4', pos: new THREE.Vector3(0, 1.5, 2.5) },
+                { id: 'Endometrium', num: '5', pos: new THREE.Vector3(0, -0.5, 2.0) },
+                { id: 'Serviks', num: '6', pos: new THREE.Vector3(0, -3.5, 2) },
+                { id: 'Vagina', num: '7', pos: new THREE.Vector3(0, -6, 2) }
             ];
 
             const dotGeo = new THREE.SphereGeometry(0.25, 16, 16);
-            const dotMat = new THREE.MeshBasicMaterial({ color: 0x00ffff, depthTest: false }); // Warna cyan menyala (X-Ray)
+            const dotMat = new THREE.MeshBasicMaterial({ color: 0xec4899, depthTest: false });
 
             anchorPoints.forEach(point => {
-                // Pembuatan Label Teks
+                // Pembuatan Badge Nomor bundar tanpa teks nama organ di atas 3D
                 const div = document.createElement('div');
-                div.className = 'hotspot-label interactive';
-                div.innerText = organData[point.id]?.title || point.id;
-                // Menambahkan fungsi klik pada label
+                div.className = 'hotspot-label interactive flex items-center justify-center font-bold shadow-lg rounded-full';
+                div.innerHTML = `<span class="bg-pink-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs font-black shadow-md border-2 border-white/80 hover:bg-yellow-400 hover:scale-110 transition-transform">${point.num}</span>`;
+                
                 div.onclick = (e) => {
                     e.stopPropagation();
                     triggerOrganInfo(point.id);
@@ -978,7 +943,7 @@
                 dot.userData = { id: point.id, isHotspotDot: true };
                 
                 reproductiveSystemGroup.add(dot);
-                organMeshes.push(dot); // Tambahkan agar bisa dikenali saat diklik
+                organMeshes.push(dot);
                 hotspotDots.push(dot);
             });
         }
@@ -1130,11 +1095,23 @@
 
         function toggleLabels() {
             state.labelsVisible = !state.labelsVisible;
+            const btn = document.getElementById('toggle-label-btn');
+
             if(!state.labelsVisible) {
                 labels.forEach(l => l.element.style.display = 'none');
                 if (hotspotDots) hotspotDots.forEach(d => d.visible = false);
+                if (btn) {
+                    btn.innerText = "Tampilkan Nomor Organ";
+                    btn.classList.replace('bg-pink-700', 'bg-amber-700');
+                    btn.classList.replace('hover:bg-pink-600', 'hover:bg-amber-600');
+                }
             } else {
                 if (hotspotDots) hotspotDots.forEach(d => d.visible = true);
+                if (btn) {
+                    btn.innerText = "Sembunyikan Nomor Organ";
+                    btn.classList.replace('bg-amber-700', 'bg-pink-700');
+                    btn.classList.replace('hover:bg-amber-600', 'hover:bg-pink-600');
+                }
             }
         }
 
