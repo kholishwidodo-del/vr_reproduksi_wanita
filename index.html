@@ -170,43 +170,290 @@
                 <h2 class="text-4xl font-bold text-pink-500 mb-8 text-center border-b border-slate-700 pb-4">Materi Pembelajaran</h2>
                 
                 <div class="space-y-8">
-                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                        <h3 class="text-2xl font-bold text-cyan-400 mb-4">1. Sistem Reproduksi Wanita</h3>
-                        <p class="text-gray-300 leading-relaxed">Sistem reproduksi wanita berfungsi untuk memproduksi sel telur (ovum), menyediakan tempat untuk pembuahan, serta tempat pertumbuhan dan perkembangan janin hingga lahir. Organ reproduksi wanita terdiri dari organ luar (vulva, labia) dan organ dalam (ovarium, tuba falopi, uterus, dan vagina).</p>
+                    <!-- SECTION 1: ANATOMI KESELURUHAN -->
+                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="w-full md:w-1/2 flex justify-center">
+                            <div class="relative w-full max-w-sm rounded-xl overflow-hidden border border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-slate-950 p-2">
+                                <img src="gambar_1.jpg" alt="Anatomi Organ Reproduksi Wanita" class="w-full h-auto rounded-lg object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <svg class="w-full h-auto hidden" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="320" height="240" rx="12" fill="#090d16"/>
+                                    <!-- Rahim & Vagina -->
+                                    <path d="M 120 70 Q 160 50 200 70 C 210 110 190 140 180 150 L 180 190 L 140 190 L 140 150 C 130 140 110 110 120 70 Z" fill="#9d174d" stroke="#ec4899" stroke-width="2"/>
+                                    <!-- Tuba Falopi Kanan/Kiri -->
+                                    <path d="M 130 80 Q 90 50 60 70 C 50 80 50 95 60 100" fill="none" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+                                    <path d="M 190 80 Q 230 50 260 70 C 270 80 270 95 260 100" fill="none" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+                                    <!-- Ovarium -->
+                                    <ellipse cx="50" cy="105" rx="14" ry="10" fill="#fef08a" stroke="#eab308" stroke-width="1.5"/>
+                                    <ellipse cx="270" cy="105" rx="14" ry="10" fill="#fef08a" stroke="#eab308" stroke-width="1.5"/>
+                                    <!-- Label Teks SVG -->
+                                    <text x="160" y="110" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">Uterus (Rahim)</text>
+                                    <text x="50" y="130" fill="#fef08a" font-size="10" font-weight="bold" text-anchor="middle">Ovarium</text>
+                                    <text x="270" y="130" fill="#fef08a" font-size="10" font-weight="bold" text-anchor="middle">Ovarium</text>
+                                    <text x="80" y="45" fill="#f472b6" font-size="10" font-weight="bold" text-anchor="middle">Tuba Falopi</text>
+                                    <text x="160" y="175" fill="#fca5a5" font-size="10" font-weight="bold" text-anchor="middle">Vagina</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-bold text-cyan-400 mb-4">1. Sistem Reproduksi Wanita</h3>
+                            <p class="text-gray-300 leading-relaxed">Sistem reproduksi wanita berfungsi untuk memproduksi sel telur (ovum), menyediakan tempat untuk pembuahan, serta tempat pertumbuhan dan perkembangan janin hingga lahir. Organ reproduksi wanita terdiri dari organ luar (vulva, labia) dan organ dalam (ovarium, tuba falopi, uterus, dan vagina).</p>
+                        </div>
                     </section>
                     
-                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                        <h3 class="text-2xl font-bold text-cyan-400 mb-4">2. Struktur & Fungsi Organ Dalam</h3>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2">
-                            <li><strong class="text-pink-300">Ovarium (Indung Telur):</strong> Menghasilkan sel telur (ovum) dan hormon estrogen serta progesteron.</li>
-                            <li><strong class="text-pink-300">Tuba Falopi (Oviduk):</strong> Saluran yang menghubungkan ovarium dengan rahim, tempat terjadinya fertilisasi (pembuahan).</li>
-                            <li><strong class="text-pink-300">Fimbriae:</strong> Jumbai-jumbai di pangkal tuba falopi yang berfungsi menangkap sel telur yang dilepaskan ovarium.</li>
-                            <li><strong class="text-pink-300">Uterus (Rahim):</strong> Tempat berkembangnya embrio/janin. Memiliki lapisan dalam yang disebut endometrium.</li>
-                            <li><strong class="text-pink-300">Serviks (Leher Rahim):</strong> Bagian bawah rahim yang menyempit dan membuka ke arah vagina.</li>
-                            <li><strong class="text-pink-300">Vagina:</strong> Saluran otot yang menghubungkan serviks ke luar tubuh, berfungsi sebagai jalan lahir dan saluran darah menstruasi.</li>
-                        </ul>
+                    <!-- SECTION 2: STRUKTUR OVARIUM & FOLIKEL (Gambar 4) -->
+                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col md:flex-row-reverse gap-6 items-center">
+                        <div class="w-full md:w-1/2 flex justify-center">
+                            <div class="relative w-full max-w-sm rounded-xl overflow-hidden border border-cyan-500/30 shadow-[0_0_20px_rgba(6,182,212,0.3)] bg-slate-950 p-2">
+                                <img src="gambar_4.jpg" alt="Struktur Organ Dalam Reproduksi Wanita" class="w-full h-auto rounded-lg object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <svg class="w-full h-auto hidden" viewBox="0 0 340 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="340" height="240" rx="12" fill="#090d16"/>
+                                    
+                                    <!-- Dinding Rahim / Uterus (Potongan Melintang) -->
+                                    <path d="M 100 80 C 100 40, 240 40, 240 80 C 240 120, 200 150, 190 170 L 190 200 L 150 200 L 150 170 C 140 150, 100 120, 100 80 Z" fill="#831843" stroke="#f43f5e" stroke-width="2"/>
+                                    <!-- Rongga Rahim & Lapisan Endometrium -->
+                                    <path d="M 125 80 C 125 60, 215 60, 215 80 C 215 105, 180 130, 175 145 L 165 145 C 160 130, 125 105, 125 80 Z" fill="#f43f5e" opacity="0.6"/>
+                                    <path d="M 140 80 Q 170 70 200 80 Q 170 120 140 80 Z" fill="#fbcfe8"/>
+                                    
+                                    <!-- Tuba Falopi Kiri & Kanan -->
+                                    <path d="M 115 70 Q 70 40, 45 65 Q 35 80, 50 90" fill="none" stroke="#fb7185" stroke-width="5" stroke-linecap="round"/>
+                                    <path d="M 225 70 Q 270 40, 295 65 Q 305 80, 290 90" fill="none" stroke="#fb7185" stroke-width="5" stroke-linecap="round"/>
+                                    
+                                    <!-- Fimbriae -->
+                                    <path d="M 45 85 Q 35 95, 45 105 M 50 88 Q 40 100, 52 108 M 55 90 Q 48 105, 58 110" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M 295 85 Q 305 95, 295 105 M 290 88 Q 300 100, 288 108 M 285 90 Q 292 105, 282 110" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"/>
+                                    
+                                    <!-- Ovarium -->
+                                    <ellipse cx="45" cy="115" rx="15" ry="10" fill="#fef08a" stroke="#eab308" stroke-width="1.5"/>
+                                    <ellipse cx="295" cy="115" rx="15" ry="10" fill="#fef08a" stroke="#eab308" stroke-width="1.5"/>
+                                    
+                                    <!-- Serviks & Vagina -->
+                                    <rect x="152" y="165" width="36" height="20" rx="3" fill="#9d174d" stroke="#be123c"/>
+                                    <rect x="150" y="188" width="40" height="32" rx="4" fill="#fda4af" stroke="#f43f5e"/>
+                                    
+                                    <!-- Penunjuk Label Visual -->
+                                    <!-- Tuba Falopi -->
+                                    <line x1="70" y1="50" x2="30" y2="30" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2"/>
+                                    <text x="25" y="25" fill="#38bdf8" font-size="9" font-weight="bold">Tuba Falopi</text>
+                                    
+                                    <!-- Ovarium -->
+                                    <line x1="45" y1="125" x2="30" y2="150" stroke="#fde047" stroke-width="1" stroke-dasharray="2 2"/>
+                                    <text x="25" y="162" fill="#fde047" font-size="9" font-weight="bold">Ovarium</text>
+                                    
+                                    <!-- Uterus/Rahim -->
+                                    <line x1="170" y1="90" x2="170" y2="30" stroke="#f472b6" stroke-width="1" stroke-dasharray="2 2"/>
+                                    <text x="170" y="22" fill="#f472b6" font-size="10" font-weight="bold" text-anchor="middle">Uterus (Rahim)</text>
+                                    
+                                    <!-- Endometrium -->
+                                    <line x1="190" y1="100" x2="250" y2="110" stroke="#f43f5e" stroke-width="1" stroke-dasharray="2 2"/>
+                                    <text x="255" y="113" fill="#f43f5e" font-size="9" font-weight="bold">Endometrium</text>
+
+                                    <!-- Serviks & Vagina -->
+                                    <line x1="188" y1="175" x2="245" y2="175" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 2"/>
+                                    <text x="250" y="178" fill="#cbd5e1" font-size="9" font-weight="bold">Serviks</text>
+                                    
+                                    <line x1="190" y1="205" x2="245" y2="215" stroke="#fda4af" stroke-width="1" stroke-dasharray="2 2"/>
+                                    <text x="250" y="218" fill="#fda4af" font-size="9" font-weight="bold">Vagina</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-bold text-cyan-400 mb-4">2. Struktur & Fungsi Organ Dalam</h3>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
+                                <li><strong class="text-pink-300">Ovarium (Indung Telur):</strong> Menghasilkan sel telur (ovum) dan hormon estrogen serta progesteron.</li>
+                                <li><strong class="text-pink-300">Tuba Falopi (Oviduk):</strong> Tempat terjadinya fertilisasi (pembuahan).</li>
+                                <li><strong class="text-pink-300">Fimbriae:</strong> Menangkap sel telur yang dilepaskan ovarium.</li>
+                                <li><strong class="text-pink-300">Uterus (Rahim):</strong> Tempat berkembangnya embrio/janin.</li>
+                                <li><strong class="text-pink-300">Endometrium:</strong> Dinding dalam rahim tempat menempelnya sel telur yang telah dibuahi.</li>
+                                <li><strong class="text-pink-300">Serviks (Leher Rahim):</strong> Pintu masuk ke rahim dari vagina.</li>
+                                <li><strong class="text-pink-300">Vagina:</strong> Jalan lahir dan saluran darah menstruasi.</li>
+                            </ul>
+                        </div>
                     </section>
 
-                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                        <h3 class="text-2xl font-bold text-cyan-400 mb-4">3. Proses Oogenesis & Ovulasi</h3>
-                        <p class="text-gray-300 leading-relaxed mb-4"><strong>Oogenesis</strong> adalah proses pembentukan sel telur di dalam ovarium. Berbeda dengan pria yang memproduksi sperma terus menerus, wanita terlahir dengan jumlah folikel (calon sel telur) yang terbatas.</p>
-                        <p class="text-gray-300 leading-relaxed"><strong>Ovulasi</strong> adalah proses pelepasan sel telur yang sudah matang dari ovarium menuju tuba falopi, yang biasanya terjadi sebulan sekali (sekitar hari ke-14 dari siklus menstruasi).</p>
+                    <!-- SECTION 3: OOGENESIS (Gambar 3) -->
+                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="w-full md:w-1/2 flex justify-center">
+                            <div class="relative w-full max-w-sm rounded-xl overflow-hidden border border-yellow-500/30 shadow-[0_0_20px_rgba(250,204,21,0.3)] bg-slate-950 p-2">
+                                <img src="gambar_3.jpg" alt="Tahapan Oogenesis (Campbell)" class="w-full h-auto rounded-lg object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <svg class="w-full h-auto hidden" viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="320" height="260" rx="12" fill="#090d16"/>
+                                    <!-- Area Kandungan -->
+                                    <rect x="10" y="10" width="300" height="80" rx="8" fill="#fef3c7" fill-opacity="0.1" stroke="#f59e0b" stroke-dasharray="4 2"/>
+                                    <text x="20" y="30" fill="#fde047" font-size="9" font-weight="bold">Terjadi saat anak perempuan dalam kandungan</text>
+                                    
+                                    <!-- Oogonium -> Oosit Primer -->
+                                    <circle cx="210" cy="35" r="12" fill="#c084fc" stroke="#a855f7"/><text x="235" y="38" fill="#ffffff" font-size="10">Oogonium</text>
+                                    <line x1="210" y1="47" x2="210" y2="60" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+                                    <circle cx="210" cy="72" r="14" fill="#c084fc" stroke="#a855f7"/><text x="235" y="75" fill="#ffffff" font-size="10">Oosit primer</text>
+
+                                    <!-- Pembelahan Meiosis -->
+                                    <line x1="210" y1="86" x2="210" y2="110" stroke="#94a3b8" stroke-width="1.5"/>
+                                    <!-- Oosit Sekunder & Polosit -->
+                                    <circle cx="140" cy="125" r="7" fill="#a855f7"/><text x="70" y="128" fill="#cbd5e1" font-size="9">Polosit (badan polar)</text>
+                                    <circle cx="210" cy="130" r="18" fill="#38bdf8" stroke="#0284c7"/><text x="235" y="133" fill="#38bdf8" font-size="10" font-weight="bold">Oosit sekunder</text>
+
+                                    <line x1="210" y1="148" x2="210" y2="170" stroke="#94a3b8" stroke-width="1.5"/>
+                                    <circle cx="210" cy="182" r="16" fill="#fef08a" stroke="#eab308"/><text x="235" y="185" fill="#ffffff" font-size="10">Ootid</text>
+
+                                    <line x1="210" y1="198" x2="210" y2="215" stroke="#94a3b8" stroke-width="1.5"/>
+                                    <circle cx="210" cy="232" r="20" fill="#facc15" stroke="#ca8a04"/><circle cx="210" cy="232" r="7" fill="#a855f7"/>
+                                    <text x="235" y="235" fill="#facc15" font-size="11" font-weight="bold">Ovum</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-bold text-cyan-400 mb-4">3. Proses Oogenesis & Ovulasi</h3>
+                            <p class="text-gray-300 leading-relaxed mb-4"><strong>Oogenesis</strong> adalah proses pembentukan sel telur di ovarium. Tahap awal oogenesis (pembentukan oosit primer) telah terjadi sejak anak perempuan masih di dalam kandungan.</p>
+                            <p class="text-gray-300 leading-relaxed"><strong>Ovulasi</strong> adalah proses pelepasan sel telur (oosit sekunder) matang dari ovarium menuju tuba falopi untuk siap dibuahi.</p>
+                        </div>
                     </section>
 
-                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                        <h3 class="text-2xl font-bold text-cyan-400 mb-4">4. Siklus Menstruasi</h3>
-                        <p class="text-gray-300 leading-relaxed">Jika sel telur tidak dibuahi, lapisan dinding rahim (endometrium) yang menebal untuk persiapan kehamilan akan luruh dan keluar bersama darah melalui vagina. Fase siklus:</p>
-                        <ol class="list-decimal list-inside text-gray-300 mt-2 space-y-1">
-                            <li>Fase Menstruasi (Hari 1-5)</li>
-                            <li>Fase Pra-ovulasi / Folikular (Hari 6-13)</li>
-                            <li>Fase Ovulasi (Hari 14)</li>
-                            <li>Fase Pasca-ovulasi / Luteal (Hari 15-28)</li>
-                        </ol>
+                    <!-- SECTION 4: SIKLUS MENSTRUASI (Gambar / Grafik Hormon) -->
+                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col md:flex-row-reverse gap-6 items-center">
+                        <div class="w-full md:w-1/2 flex justify-center">
+                            <div class="relative w-full max-w-sm rounded-xl overflow-hidden border border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-slate-950 p-2">
+                                <img src="gambar.jpg" alt="Grafik Konsentrasi Hormon Menstruasi" class="w-full h-auto rounded-lg object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <svg class="w-full h-auto hidden" viewBox="0 0 350 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="350" height="200" rx="12" fill="#090d16"/>
+                                    <!-- Sumbu Koordinat -->
+                                    <line x1="40" y1="20" x2="40" y2="160" stroke="#64748b" stroke-width="2"/>
+                                    <line x1="40" y1="160" x2="330" y2="160" stroke="#64748b" stroke-width="2"/>
+                                    <text x="15" y="90" fill="#cbd5e1" font-size="9" font-weight="bold" transform="rotate(-90 15,90)">Konsentrasi Hormon</text>
+                                    <text x="180" y="190" fill="#cbd5e1" font-size="9" font-weight="bold">Hari (0 - 28)</text>
+
+                                    <!-- Kurva FSH (Biru) -->
+                                    <path d="M 40 130 Q 80 125 120 135 Q 160 100 180 120 Q 250 150 330 140" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+                                    <text x="65" y="120" fill="#60a5fa" font-size="9" font-weight="bold">FSH</text>
+
+                                    <!-- Kurva Estrogen (Hijau Putus-putus) -->
+                                    <path d="M 40 150 Q 120 145 160 60 Q 180 130 250 110 Q 300 120 330 155" stroke="#22c55e" stroke-width="2" stroke-dasharray="4 2" fill="none"/>
+                                    <text x="120" y="80" fill="#4ade80" font-size="9" font-weight="bold">Estrogen</text>
+
+                                    <!-- Kurva LH (Oranye Puncak Tinggi Hari 13) -->
+                                    <path d="M 40 145 L 140 140 Q 165 25 185 120 L 330 150" stroke="#f97316" stroke-width="2.5" fill="none"/>
+                                    <text x="180" y="35" fill="#fb923c" font-size="10" font-weight="bold">LH</text>
+
+                                    <!-- Kurva Progesteron (Merah Putus-putus Hari 20-24) -->
+                                    <path d="M 40 155 L 170 155 Q 240 60 300 130 L 330 155" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+                                    <text x="250" y="75" fill="#f87171" font-size="9" font-weight="bold">Progesteron</text>
+
+                                    <!-- Garis Hari 14 (Ovulasi) -->
+                                    <line x1="165" y1="20" x2="165" y2="160" stroke="#e2e8f0" stroke-opacity="0.3" stroke-dasharray="2 2"/>
+                                    <text x="165" y="173" fill="#fde047" font-size="8" text-anchor="middle">14 (Ovulasi)</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-bold text-cyan-400 mb-4">4. Siklus Menstruasi & Grafik Hormon</h3>
+                            <p class="text-gray-300 leading-relaxed mb-3">Jika sel telur tidak dibuahi, lapisan dinding rahim (endometrium) akan luruh menjadi darah menstruasi. Dikendalikan oleh 4 hormon:</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1 text-sm md:text-base">
+                                <li><strong class="text-blue-400">FSH:</strong> Memicu pematangan folikel ovarium.</li>
+                                <li><strong class="text-green-400">Estrogen:</strong> Menebalkan endometrium & memicu lonjakan LH.</li>
+                                <li><strong class="text-orange-400">LH:</strong> Mencapai puncak tertinggi pada hari ke-14 memicu **Ovulasi**.</li>
+                                <li><strong class="text-red-400">Progesteron:</strong> Meningkat tinggi pada fase luteal (hari 20–24) mempertahankan rahim.</li>
+                            </ul>
+                        </div>
                     </section>
 
-                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                        <h3 class="text-2xl font-bold text-cyan-400 mb-4">5. Fertilisasi & Implantasi</h3>
-                        <p class="text-gray-300 leading-relaxed"><strong>Fertilisasi</strong> adalah peleburan inti sel sperma dan inti sel telur yang terjadi di tuba falopi, menghasilkan zigot. Zigot kemudian bergerak menuju rahim sambil membelah diri menjadi blastokista. <strong>Implantasi</strong> adalah proses menempelnya blastokista pada dinding rahim (endometrium) untuk berkembang menjadi janin.</p>
+                    <!-- SECTION 5: FERTILISASI & IMPLANTASI (Gambar 2) -->
+                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="w-full md:w-1/2 flex justify-center">
+                            <div class="relative w-full max-w-sm rounded-xl overflow-hidden border border-purple-500/30 shadow-[0_0_20px_rgba(168,85,247,0.3)] bg-slate-950 p-2">
+                                <img src="gambar_2.jpg" alt="Tahap Fertilisasi dan Implantasi (Campbell)" class="w-full h-auto rounded-lg object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <svg class="w-full h-auto hidden" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="340" height="220" rx="12" fill="#090d16"/>
+                                    <!-- Saluran Tuba & Rahim -->
+                                    <path d="M 40 70 Q 150 20 260 70 C 290 85 290 140 270 180" fill="none" stroke="#9d174d" stroke-width="24" stroke-linecap="round"/>
+                                    <!-- Tahap 1 Ovulasi -->
+                                    <circle cx="50" cy="110" r="14" fill="#fef08a"/><circle cx="50" cy="85" r="5" fill="#ef4444"/>
+                                    <text x="25" y="80" fill="#38bdf8" font-size="8" font-weight="bold">1 Ovulasi</text>
+
+                                    <!-- Tahap 2 Fertilisasi -->
+                                    <circle cx="100" cy="55" r="7" fill="#ef4444" stroke="#ffffff"/>
+                                    <text x="80" y="35" fill="#38bdf8" font-size="8" font-weight="bold">2 Fertilisasi</text>
+
+                                    <!-- Tahap 3 Pembelahan -->
+                                    <circle cx="160" cy="45" r="8" fill="#facc15"/><text x="150" y="28" fill="#38bdf8" font-size="8" font-weight="bold">3 Pembelahan</text>
+
+                                    <!-- Tahap 4 Pembelahan Lanjutan -->
+                                    <circle cx="230" cy="55" r="9" fill="#facc15"/><text x="220" y="38" fill="#38bdf8" font-size="8" font-weight="bold">4 Pembelahan lanjutan</text>
+
+                                    <!-- Tahap 5 Implantasi -->
+                                    <circle cx="270" cy="140" r="12" fill="#eab308" stroke="#ef4444" stroke-width="2"/>
+                                    <text x="215" y="145" fill="#38bdf8" font-size="8" font-weight="bold">5 Implantasi</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-bold text-cyan-400 mb-4">5. Fertilisasi & Implantasi</h3>
+                            <p class="text-gray-300 leading-relaxed mb-3">Tahapan perkembangan dari fertilisasi hingga embrio menempel:</p>
+                            <ol class="list-decimal list-inside text-gray-300 space-y-1 text-sm md:text-base">
+                                <li><strong class="text-pink-300">Ovulasi:</strong> Pelepasan sel telur matang dari ovarium.</li>
+                                <li><strong class="text-pink-300">Fertilisasi:</strong> Peleburan sel sperma & ovum di tuba falopi.</li>
+                                <li><strong class="text-pink-300">Pembelahan:</strong> Zigot membelah menjadi 2 sel, 4 sel, dst.</li>
+                                <li><strong class="text-pink-300">Pembelahan Lanjutan:</strong> Membentuk morula & blastokista.</li>
+                                <li><strong class="text-pink-300">Implantasi:</strong> Blastokista menempel & membenamkan diri di lapisan endometrium rahim.</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <!-- SECTION 6: MENJAGA KESEHATAN REPRODUKSI -->
+                    <section class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col md:flex-row-reverse gap-6 items-center">
+                        <div class="w-full md:w-1/2 flex justify-center">
+                            <div class="relative w-full max-w-sm rounded-xl overflow-hidden border border-emerald-500/30 shadow-[0_0_20px_rgba(16,185,129,0.3)] bg-slate-950 p-2">
+                                <img src="gambar_5.jpg" alt="Panduan Menjaga Kesehatan Organ Reproduksi" class="w-full h-auto rounded-lg object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <svg class="w-full h-auto hidden" viewBox="0 0 350 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="350" height="240" rx="12" fill="#090d16"/>
+                                    
+                                    <!-- Perisai Pelindung Utama (Shield/Protection) -->
+                                    <path d="M 175 25 C 130 25 85 45 85 105 C 85 170 175 215 175 215 C 175 215 265 170 265 105 C 265 45 220 25 175 25 Z" fill="#064e3b" opacity="0.6" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 2"/>
+                                    
+                                    <!-- Ikon Kebersihan / Air (Droplet & Sparkling) -->
+                                    <g transform="translate(105, 50)">
+                                        <circle cx="20" cy="20" r="18" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
+                                        <path d="M 20 10 C 20 10 12 21 12 25 C 12 29.4 15.6 33 20 33 C 24.4 33 28 29.4 28 25 C 28 21 20 10 20 10 Z" fill="#38bdf8"/>
+                                        <text x="20" y="48" fill="#a7f3d0" font-size="8" font-weight="bold" text-anchor="middle">Air Bersih</text>
+                                    </g>
+
+                                    <!-- Ikon Pakaian Bahan Katun (Shirt/Fabric) -->
+                                    <g transform="translate(205, 50)">
+                                        <circle cx="20" cy="20" r="18" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
+                                        <path d="M 12 12 L 18 16 L 22 16 L 28 12 L 25 28 L 15 28 Z" fill="#fbbf24"/>
+                                        <text x="20" y="48" fill="#a7f3d0" font-size="8" font-weight="bold" text-anchor="middle">Celana Katun</text>
+                                    </g>
+
+                                    <!-- Ikon Ganti Pembalut Rutin (Menstrual Care/Clock) -->
+                                    <g transform="translate(105, 125)">
+                                        <circle cx="20" cy="20" r="18" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
+                                        <circle cx="20" cy="20" r="10" stroke="#f472b6" stroke-width="2" fill="none"/>
+                                        <polyline points="20,13 20,20 25,23" stroke="#f472b6" stroke-width="2" stroke-linecap="round"/>
+                                        <text x="20" y="48" fill="#a7f3d0" font-size="8" font-weight="bold" text-anchor="middle">Rutin Ganti</text>
+                                    </g>
+
+                                    <!-- Ikon Gaya Hidup Sehat & Nutrisi (Heart/Healthy) -->
+                                    <g transform="translate(205, 125)">
+                                        <circle cx="20" cy="20" r="18" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
+                                        <path d="M 20 28 L 14 22 C 11.5 19.5 11.5 15.5 14 13 C 16.5 10.5 20.5 11.5 20 14 C 19.5 11.5 23.5 10.5 26 13 C 28.5 15.5 28.5 19.5 26 22 L 20 28 Z" fill="#ef4444"/>
+                                        <text x="20" y="48" fill="#a7f3d0" font-size="8" font-weight="bold" text-anchor="middle">Gaya Hidup</text>
+                                    </g>
+
+                                    <!-- Judul Tengah -->
+                                    <text x="175" y="115" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">KESEHATAN</text>
+                                    <text x="175" y="128" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">ORGAN REPRODUKSI</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-bold text-emerald-400 mb-4">6. Menjaga Kesehatan Organ ReproduKSI</h3>
+                            <p class="text-gray-300 leading-relaxed mb-3">Menjaga kebersihan dan kesehatan organ reproduksi sangat penting untuk mencegah infeksi, iritasi, serta penyakit saluran reproduksi:</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
+                                <li><strong class="text-emerald-300">Membasuh dari Depan ke Belakang:</strong> Saat membersihkan area kewanitaan setelah buang air, selalu basuh dari depan ke belakang agar bakteri dari anus tidak masuk ke organ reproduksi.</li>
+                                <li><strong class="text-emerald-300">Pakaian Dalam Bahan Katun:</strong> Gunakan celana dalam berbahan katun yang menyerap keringat dan ganti minimal 2 kali sehari agar area reproduksi tidak lembap.</li>
+                                <li><strong class="text-emerald-300">Rutin Mengganti Pembalut:</strong> Saat menstruasi, ganti pembalut secara berkala setiap 3–4 jam sekali untuk mencegah perkembangbiakan bakteri dan jamur.</li>
+                                <li><strong class="text-emerald-300">Hindari Sabun Pembilas Beraroma Keras:</strong> Jangan sering menggunakan sabun pembersih kewanitaan yang mengandung parfum/kimia keras karena dapat merusak kadar pH alami dan flora normal vagina.</li>
+                                <li><strong class="text-emerald-300">Pola Hidup & Nutrisi Seimbang:</strong> Konsumsi makanan bergizi, cukupi kebutuhan air minum, dan berolahraga secara teratur untuk menjaga kestabilan hormon reproduksi.</li>
+                            </ul>
+                        </div>
                     </section>
                 </div>
             </div>
